@@ -7,6 +7,5 @@ import preact from "@astrojs/preact";
 export default defineConfig({
   site: 'https://joselebasi.github.io',
   base: '/spacex_demo',
-  integrations: [tailwind(), preact()],
-  output: 'server'
+  integrations: [tailwind(), preact()]
 });

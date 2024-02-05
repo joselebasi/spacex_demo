@@ -12,7 +12,13 @@ if(id){
     launch= await  getLaunchBy({ id })
 }
 
-
+export async function getStaticPaths(){
+    const launches = await getLatestLaunches()
+    return launches.map(launch => ({
+        params: {id: launch.id},
+    }))
+    //return[{params :{id:"5eb87cd9ffd86e000604b32a"}}]
+}
 
 console.log(launch)
 ---
